@@ -1,0 +1,66 @@
+.form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+
+.mat-card {
+    width: 100%;
+    max-width: 800px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.image-container {
+    width: 75%;
+    height: 100%;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.form-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    /* Adicione espaçamento interno */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.logo-container img {
+    max-width: 75%;
+    max-height: 75px;
+}
+
+.input-container {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+
+}

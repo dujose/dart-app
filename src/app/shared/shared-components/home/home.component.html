@@ -1,0 +1,18 @@
+<p>
+  <mat-toolbar color="primary">
+    <img src="{{avatarURL}}" alt="Avatar" class="avatar">
+    <h1>Bem Vindo(a), {{full_name}}</h1>
+    <div class="container">
+    </div>
+    <span class="space-toolbar"></span>
+    <button mat-icon-button (click)="doLogOut()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+  <button mat-raised-button type="submit" (click)="openURL('projects')">PROJETOS</button>
+  <button mat-raised-button type="submit" (click)="openURL('schedule')">AGENDA</button>
+</p>
+
+<mat-card-content>
+  <router-outlet></router-outlet>
+</mat-card-content>
