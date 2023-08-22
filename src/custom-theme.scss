@@ -12,14 +12,15 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$dart-app-primary: mat.define-palette(mat.$indigo-palette, 600);
-$dart-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$dart-app-primary: mat.define-palette(mat.$orange-palette, A700);
+$dart-app-accent: mat.define-palette(mat.$gray-palette, 100);
+
 
 // $dart-app-primary-color: mat.define-palette( #f58225);
 // $dart-app-accen-color:mat.define-palette( #4f4f4f);
 
 // The warn palette is optional (defaults to red).
-$dart-app-warn: mat.define-palette(mat.$red-palette);
+$dart-app-warn: mat.define-palette(mat.$gray-palette, 700);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
