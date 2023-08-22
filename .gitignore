@@ -6,6 +6,7 @@
 /dist/
 /build/
 /target/
+/.angular/
 *.swp
 *.swo
 .idea
