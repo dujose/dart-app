@@ -2,41 +2,30 @@
 <div *ngIf="isLoading">
     <app-loader></app-loader>
 </div>
-<div *ngIf="!isLoading" class="form-container">
-    <mat-card>
-        <mat-card-content>
-            <div class="content-container">
-                <div class="image-container">
-                    <img src="https://www.dartdigital.com.br/imagens/slider/aplicativos-moveis.webp"
-                        alt="Imagem de fundo">
-                </div>
-                <div class="form-content">
-                    <div class="logo-container">
-                        <img src="https://www.dartdigital.com.br/imagens/logo.webp" alt="Logo">
-                    </div>
-                    <form [formGroup]="loginForm">
-                        <div class="input-container">
-                            <mat-form-field>
-                                <input matInput placeholder="Usuário" required formControlName="username">
-                                <mat-error
-                                    *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username') ">Usuário
-                                    é Obrigatório</mat-error>
-                            </mat-form-field>
-                        </div>
-                        <div class="input-container">
-                            <mat-form-field>
-                                <input matInput type="password" required placeholder="Senha" formControlName="password">
-                                <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Senha é
-                                    Obrigatória</mat-error>
-                                <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Padrão de Senha
-                                    Inválido</mat-error>
-                            </mat-form-field>
-                        </div>
-                        <button mat-raised-button color="primary" [disabled]="!loginForm.valid"
-                            (click)="doLogin()">CONTINUAR</button>
-                    </form>
-                </div>
-            </div>
-        </mat-card-content>
-    </mat-card>
+<div *ngIf="!isLoading" class="container-fluid login-container">
+
+    <div class="background-image"></div>
+ 
+    <div form [formGroup]="loginForm" class="login-form">
+        <div class="logo-image">
+            <img src="https://www.dartdigital.com.br/imagens/logo.webp" alt="Logo">
+        </div>
+        <mat-form-field >
+            <mat-label>Usuário</mat-label>
+            <input type="text"  matInput formControlName="username" placeholder="Usuário"   >
+            <mat-error  class="form-error" *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username') ">Usuário é Obrigatório</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field >
+            <mat-label>Senha</mat-label>
+            <input type="password" matInput  formControlName="password" placeholder="Senha" [type]="pswHide ? 'password' : 'text'" >
+            <mat-icon color="primary" matSuffix (click)="pswHide = !pswHide">{{pswHide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            <mat-error class="form-error" *ngIf="loginForm.get('password')?.hasError('required')">Senha é  Obrigatória</mat-error>
+            <mat-error class="form-error" *ngIf="loginForm.get('password')?.hasError('minlength')">Padrão de Senha Inválido</mat-error>
+        </mat-form-field>
+        
+        <button mat-button color="primary"  (click)="doLogin()" [disabled]="!loginForm.valid"><span style="color: black;">CONTINUAR</span> </button>
+    
+    </div>
+
 </div>

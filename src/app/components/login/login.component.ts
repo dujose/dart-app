@@ -16,6 +16,7 @@ export class LoginComponent {
 
   loginForm: FormGroup = new FormGroup({});
   isLoading: boolean = false;
+  pswHide: boolean = true;
 
   constructor(
     private formBuilder: FormBuilder,
