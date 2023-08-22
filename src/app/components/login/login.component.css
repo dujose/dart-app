@@ -29,3 +29,6 @@ body, html {
 .form-error{
     font-size: small;
 }
+.login-mat-button{
+  background-color: #f58225;
+}

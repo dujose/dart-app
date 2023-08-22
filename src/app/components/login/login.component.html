@@ -24,7 +24,7 @@
             <mat-error class="form-error" *ngIf="loginForm.get('password')?.hasError('minlength')">Padrão de Senha Inválido</mat-error>
         </mat-form-field>
         
-        <button mat-button color="primary"  (click)="doLogin()" [disabled]="!loginForm.valid"><span style="color: black;">CONTINUAR</span> </button>
+        <button mat-button color="primary"  class="login-mat-button" (click)="doLogin()" [disabled]="!loginForm.valid"><span style="color: black;">CONTINUAR</span> </button>
     
     </div>
 
